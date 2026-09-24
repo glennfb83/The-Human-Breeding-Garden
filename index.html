@@ -1,1 +1,29 @@
-
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Signal Garden — The Human Breeding Garden</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="masthead">
+      <div><p class="eyebrow">FIELD MANUAL 00 / STATIC EDITION</p><h1>The Human<br>Breeding Garden</h1><p class="dek">A tiny social greenhouse for growing trust, trading curiosities, and breeding impossible plants.</p></div>
+      <div class="readout"><span><b id="day">01</b> DAY</span><span><b id="time">08:00</b> LOCAL</span><span class="live"><i></i> LIVE</span></div>
+    </header>
+    <section class="layout">
+      <div class="screen"><canvas id="world" width="1000" height="620" aria-label="Explore the garden"></canvas><div class="hint"><b>WASD</b> drift <b>E</b> listen <b>R</b> seed lab</div></div>
+      <aside>
+        <section class="panel lesson"><div class="title"><em>01</em><h2>Field notes</h2></div><p id="lesson">Walk toward a glowing signal. The garden reveals itself one step at a time.</p><div class="meter"><i id="lessonBar"></i></div><small id="lessonCount">NOTE 1 OF 4</small></section>
+        <section class="panel"><div class="title"><em>02</em><h2>Known signals</h2></div><div id="contacts" class="contacts"></div></section>
+        <section class="panel"><div class="title"><em>03</em><h2>Seed cabinet</h2></div><div class="cabinet"><div><strong id="seeds">4</strong><small>sun seeds</small></div><div><strong id="pollen">3</strong><small>wild pollen</small></div><div><strong id="fruit">0</strong><small>hybrid fruit</small></div></div></section>
+        <section class="panel lab"><div class="title"><em>04</em><h2>Breeding lab</h2></div><p id="labText">Meet two gardeners, then press <b>R</b> to cross-pollinate their plants.</p><div id="genePool" class="gene-pool"></div></section>
+        <section class="panel"><div class="title"><em>05</em><h2>Garden log</h2></div><div id="log" class="log" aria-live="polite"></div></section>
+      </aside>
+    </section>
+    <footer><span>NO SERVERS / NO POPUPS / JUST A SMALL WORLD</span><span>VER 0.2 — BOTANICAL NETWORK</span></footer>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
