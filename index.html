@@ -1,1 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Signal Garden // The Human Breeding Garden</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="masthead">
+      <div>
+        <p class="eyebrow">FIELD MANUAL 00 / SIGNAL GARDEN</p>
+        <h1>The Human Breeding Garden</h1>
+        <p class="subtitle">A quiet little world for growing trust, trading oddities, and making something new.</p>
+      </div>
+      <div class="status-readout" aria-label="Game status">
+        <span><b id="dayValue">01</b> DAY</span>
+        <span><b id="clockValue">08:00</b> LOCAL</span>
+        <span class="signal"><i></i> LIVE</span>
+      </div>
+    </header>
 
+    <section class="game-layout">
+      <div class="screen-wrap">
+        <canvas id="world" width="1000" height="620" aria-label="The Signal Garden game world"></canvas>
+        <div class="canvas-note"><span class="key">WASD</span> drift &nbsp; <span class="key">E</span> open a nearby signal</div>
+      </div>
+
+      <aside class="sidebar">
+        <section class="panel tutorial-panel">
+          <div class="panel-heading"><span>01</span><h2>Field notes</h2></div>
+          <p id="tutorialText">Move toward a glowing signal. The garden reveals itself one step at a time.</p>
+          <div class="progress-track"><span id="tutorialProgress"></span></div>
+          <small id="tutorialCount">NOTE 1 OF 4</small>
+        </section>
+
+        <section class="panel contacts-panel">
+          <div class="panel-heading"><span>02</span><h2>Known signals</h2></div>
+          <div id="contacts" class="contact-list"></div>
+        </section>
+
+        <section class="panel pack-panel">
+          <div class="panel-heading"><span>03</span><h2>Your satchel</h2></div>
+          <div class="inventory">
+            <div><span class="item-icon seed-icon">✦</span><b id="seedCount">3</b><small>sun seeds</small></div>
+            <div><span class="item-icon ink-icon">≈</span><b id="inkCount">1</b><small>bright ink</small></div>
+            <div><span class="item-icon fruit-icon">●</span><b id="fruitCount">0</b><small>hybrid fruit</small></div>
+          </div>
+        </section>
+
+        <section class="panel log-panel">
+          <div class="panel-heading"><span>04</span><h2>Garden log</h2></div>
+          <div id="log" class="log" aria-live="polite"></div>
+        </section>
+      </aside>
+    </section>
+
+    <footer><span>NO SERVERS / NO DESTINATION / JUST A SMALL WORLD</span><span>VER 0.1 — STATIC EDITION</span></footer>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
