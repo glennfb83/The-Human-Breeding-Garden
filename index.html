@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Signal Garden — The Human Breeding Garden</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Keep the playfield visible even when a browser applies a canvas sizing rule. */
+    .screen canvas { display: block; width: 100%; height: auto; min-height: 360px; background: #213732; }
+    .flower-collection { display: grid; gap: 8px; }
+    .flower-card { display: flex; align-items: center; gap: 9px; padding: 8px 10px; border: 1px solid var(--line); background: rgba(255,255,255,.22); }
+    .flower-mark { width: 14px; height: 14px; flex: 0 0 14px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); background: var(--acid); box-shadow: 0 0 10px currentColor; }
+    .flower-card small { display: block; color: var(--muted); }
+  </style>
 </head>
 <body>
   <main class="shell">
@@ -49,13 +57,19 @@
           <div id="genePool" class="gene-pool"></div>
         </section>
 
+        <section class="panel">
+          <div class="title"><em>05</em><h2>Freaky flower collection</h2></div>
+          <p>Every gene you discover and every hybrid you grow stays in your greenhouse.</p>
+          <div id="flowerCollection" class="flower-collection" aria-live="polite"></div>
+        </section>
+
         <section class="panel log-panel">
-          <div class="title"><em>05</em><h2>Garden log</h2></div>
+          <div class="title"><em>06</em><h2>Garden log</h2></div>
           <div id="log" class="log" aria-live="polite"></div>
         </section>
       </aside>
     </section>
-    
+
     <div id="conversation" class="sr-only" aria-live="polite"></div>
   </main>
 
